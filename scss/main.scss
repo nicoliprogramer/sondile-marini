@@ -103,22 +103,30 @@ main {
     width: 100%;
 }
 
-.item-1 {
+@mixin size ($alto, $ancho, $margin){
     padding: 1rem;
     width: 33%;
     margin: 0px auto;
+}
+
+.item-1 {
+    padding: $alto;
+    width: $ancho;
+    margin: $margin;
 }
 
 .item-2 {
-    margin: 0px auto;
-    padding: 1rem;
-    width: 33%;
+    padding: $alto;
+    width: $ancho;
+    margin: $margin;
 }
 
+
 .item-3 {
-    margin: 0px auto;
-    padding: 1rem;
-    width: 33%;
+    padding: $alto;
+    width: $ancho;
+    margin: $margin;
+
 }
 
 @media screen and (min-width:768px) {

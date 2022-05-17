@@ -107,7 +107,7 @@ main {
     padding: 1rem;
     width: 33%;
     margin: 0px auto;
-}
+
 
 .item-1 {
     padding: $alto;
@@ -129,6 +129,7 @@ main {
 
 }
 
+}
 @media screen and (min-width:768px) {
     header {
         flex-direction: row;
@@ -307,15 +308,13 @@ h1 {
 }
 
 $cards: (
-    1: '../img/Concept07.jpg',
-    2: '../img/caithe.jpg',
-    3: '../img/LegendaryMed.jpg',
-    4: '../img/LegendaryLight.jpg',
-    5: '../img/boss_1.jpg'
-);
+    1: green,
+    2: red,
+    3: blue,
+);  
 
-@each $number, $img in $cards {
+@each $number, $color in $cards {
     .card_#{$number} {
-        background-image: url($img);
+        background-color: ($color);
     }
 }
